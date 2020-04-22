@@ -80,6 +80,26 @@ delay(x);
 }
 if(digitalRead(2)==0){
 tone(8,400,100);
+if(n==1){
+    x*2;
+    Serial.println("Faster X 2 (Current Speed : X"+String(2)+")");
+    n++;
+    }
+else if(n==2){
+    x*2;
+    Serial.println("Faster X 2 (Current Speed : X"+String(4)+")");
+    n++;
+}
+else if(n==3){
+    x*2;
+    Serial.println("Faster X 2 (Current Speed : X"+String(8)+")");
+    n++;
+}
+else if(n>3){
+    x*2;
+    Serial.println("Faster X 2 (Current Speed : X"+String(n*n)+")");
+    n++;
+}
 digitalWrite(3,1);
 delay(x);
 digitalWrite(3,0);
@@ -135,25 +155,6 @@ digitalWrite(4,1);
 delay(x);
 digitalWrite(4,0);
 delay(x);
-if(n==1){
-    x*2;
-    Serial.println("Faster X 2 (Current Speed : X"+String(2)+")");
-    n++;
-    }
-else if(n==2){
-    x*2;
-    Serial.println("Faster X 2 (Current Speed : X"+String(4)+")");
-    n++;
-}
-else if(n==3){
-    x*2;
-    Serial.println("Faster X 2 (Current Speed : X"+String(8)+")");
-    n++;
-}
-else if(n>3){
-    x*2;
-    Serial.println("Faster X 2 (Current Speed : X"+String(n*n)+")");
-    n++;
-}
+
 }
 }
